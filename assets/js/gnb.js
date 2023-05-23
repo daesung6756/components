@@ -3,19 +3,19 @@ const gnb = {
     items : [
         {
             name : "Home",
-            src : "../pages/index.html"
+            src : "../docs/index.html"
         },
         {
             name : "Popup",
-            src : "../pages/popup.html"
+            src : "../docs/popup.html"
         },
         {
             name : "Input",
-            src : "../pages/input.html"
+            src : "../docs/input.html"
         },
         {
             name : "Notification",
-            src : "../pages/notification.html"
+            src : "../docs/notification.html"
         }
     ],
     openButtonIcon : '<i class="icon icon-burger-white"><span class="blind">gnb open</span></i>',

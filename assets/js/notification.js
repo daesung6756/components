@@ -116,8 +116,6 @@ const notificationGroup = {
         const item = document.querySelector("[data-notification-item='" + dataName +"']");
         const index = this.successGroup.indexOf(dataName);
 
-        console.log(wrap);
-
         if (this.successGroup.includes(dataName)){
             return;
         } else {
