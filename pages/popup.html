@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../assets/js/include.js"></script>
+    <script type="text/javascript">
+        include.head("Popup Component","popup.css") // title, add css
+    </script>
+</head>
+<body>
+    <div id="wrap" class="wrap">
+    
+        <main id="main" class="main container">
+            <div class="content">
+                <!-- Guide : START -->
+                <section class="section">
+                    <header class="section-header">
+                        <h2 class="title">작업 가이드</h2>
+                    </header>
+                    <div class="row jc-sb gap20 mt20">
+                        <div class="column n2">
+                            <h3 class="title round-title-box-blue fc-white">Class guide</h3>
+                            <p class="desc mt10">* 추가 클래스 아무것도 넣지 않으면 일반 레이어 팝업 사용.</p>
+                            <ul class="mt20 list-align2">
+                                <li>is-dimmed : 딤 레이어 팝업 사용</li>
+                                <li>is-full : 모바일에서 전체 화면 팝업</li>
+                                <li>is-confirm : 컨펌 디자인 팝업</li>
+                                <li>is-alert : 경고창 디자인 팝업</li>
+                            </ul>
+                        </div>
+                        <div class="column n2">
+                            <h3 class="title round-title-box-blue fc-white">Data name Guide</h3>
+                            <ul class="mt20 list-align2">
+                                <li>data-popup : 팝업 마크업</li>
+                                <li>data-popup-open : 팝업 열기.</li>
+                                <li>data-popup-close : 팝업 닫기.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <p class="mt20">
+                        데이터명 규칙은 자율이지만 팝업 타겟 / 팝업 오픈 / 팝업 클로즈 데이터는 동일한 네이밍을 해야 합니다. 한 세트 입니다.
+                        추가적인 이벤트를 처리하기 위해서는 onclick 활용 해주세요.
+                    </p>
+                </section>
+                <!-- //Guide : END -->
+                
+                <section class="section">
+                    <div class="column">
+                        <div class="article-header">
+                            <h3 class="title round-title-box-blue fc-white">Multiple open button</h3>
+                        </div>
+                        <div class="row ai-c jc-sb mt20">
+                            <div class="column n2 tac">
+                                <p class="desc">* 여러개의 팝업 열기는 data-popup-open 을 동일한 데이터명으로 사용합니다.</p>
+                                <ul class="mt20 list-align2">
+                                    <li><button type="button" class="btn btn-round size-lg bg-success" data-popup-open="popup1">popup1 열기</button></li>
+                                    <li><button type="button" class="btn btn-round size-lg bg-success" data-popup-open="popup1">popup1 열기</button></li>
+                                    <li><button type="button" class="btn btn-round size-lg bg-success" data-popup-open="popup1">popup1 열기</button></li>
+                                    <li><button type="button" class="btn btn-round size-lg bg-success" data-popup-open="popup1">popup1 열기</button></li>
+                                </ul>
+                            </div>
+                            <div class="column n2">
+                                <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div><div style="line-height:130%">16</div><div style="line-height:130%">17</div><div style="line-height:130%">18</div><div style="line-height:130%">19</div><div style="line-height:130%">20</div><div style="line-height:130%">21</div><div style="line-height:130%">22</div><div style="line-height:130%">23</div><div style="line-height:130%">24</div><div style="line-height:130%">25</div><div style="line-height:130%">26</div><div style="line-height:130%">27</div><div style="line-height:130%">28</div></div></td><td style="padding:6px 0;text-align:left"><pre style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">&lt;!--</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">data-popup</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">data-popup-open</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">data-popup-close</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">동일한&nbsp;데이터명을&nbsp;사용해야&nbsp;하나로&nbsp;인지&nbsp;합니다.</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">--&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"popup-wrap&nbsp;is-dimmed&nbsp;is-full"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">data-popup</span>=<span style="color:#ffd500">"데이터명"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"row&nbsp;jc-c&nbsp;ai-c"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"popup"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"popup-inner"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"popup-head"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">h4</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"title"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">title</span>=<span style="color:#ffd500">"팝업&nbsp;제목&nbsp;입니다."</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span>팝업&nbsp;제목&nbsp;입니다.&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">h4</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">button</span>&nbsp;<span style="color:#a8ff58">type</span>=<span style="color:#ffd500">"button"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"head-close-btn-design"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">data-popup-close</span>=<span style="color:#ffd500">"popup1"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">i</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"icon&nbsp;icon-cross-circle-white"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">span</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"blind"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span>Popup&nbsp;close<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">span</span><span style="color:#f0f0f0">&gt;</span><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">i</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">button</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"popup-body"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">h5</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"title"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">h5</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;컨텐츠&nbsp;영역&nbsp;입니다.&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"popup-foot"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">button</span>&nbsp;<span style="color:#a8ff58">type</span>=<span style="color:#ffd500">"button"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"btn&nbsp;bg-info&nbsp;btn-round&nbsp;size-mid"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">data-popup-close</span>=<span style="color:#ffd500">"데이터명"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span>취소<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">button</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">button</span>&nbsp;<span style="color:#a8ff58">type</span>=<span style="color:#ffd500">"button"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"btn&nbsp;bg-primary&nbsp;btn-round&nbsp;size-mid"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">data-popup-close</span>=<span style="color:#ffd500">"데이터명"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span>확인<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">button</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div></pre><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section">
+                    <div class="column">
+                        <div class="article-header">
+                            <h3 class="title round-title-box-blue fc-white">Type Popup</h3>
+                        </div>
+                        <div class="row ai-c jc-sb mt20">
+                            <div class="column n2 tac">
+                                <ul class="mt20 list-align2">
+                                    <li><button type="button" class="btn btn-round size-lg bg-success" data-popup-open="popup1">popup1(default dimmed layer) 열기</button></li>
+                                    <li><button type="button" class="btn btn-round size-lg bg-success" data-popup-open="popup2">popup2(confirm layer) 열기</button></li>
+                                    <li><button type="button" class="btn btn-round size-lg bg-success" data-popup-open="popup3">popup3(alert layer) 열기</button></li>
+                                    <li><button type="button" class="btn btn-round size-lg bg-success" data-popup-open="popup4">popup4(default layer) 열기</button></li>
+                                </ul>
+                            </div>
+                            <div class="column n2">
+                                <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div><div style="line-height:130%">16</div><div style="line-height:130%">17</div><div style="line-height:130%">18</div><div style="line-height:130%">19</div><div style="line-height:130%">20</div><div style="line-height:130%">21</div><div style="line-height:130%">22</div><div style="line-height:130%">23</div><div style="line-height:130%">24</div><div style="line-height:130%">25</div><div style="line-height:130%">26</div><div style="line-height:130%">27</div><div style="line-height:130%">28</div></div></td><td style="padding:6px 0;text-align:left"><pre style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">&lt;!--</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">data-popup</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">data-popup-open</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">data-popup-close</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">동일한&nbsp;데이터명을&nbsp;사용해야&nbsp;하나로&nbsp;인지&nbsp;합니다.</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">--&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"popup-wrap&nbsp;is-dimmed&nbsp;is-full"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">data-popup</span>=<span style="color:#ffd500">"데이터명"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"row&nbsp;jc-c&nbsp;ai-c"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"popup"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"popup-inner"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"popup-head"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">h4</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"title"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">title</span>=<span style="color:#ffd500">"팝업&nbsp;제목&nbsp;입니다."</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span>팝업&nbsp;제목&nbsp;입니다.&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">h4</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">button</span>&nbsp;<span style="color:#a8ff58">type</span>=<span style="color:#ffd500">"button"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"head-close-btn-design"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">data-popup-close</span>=<span style="color:#ffd500">"popup1"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">i</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"icon&nbsp;icon-cross-circle-white"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">span</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"blind"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span>Popup&nbsp;close<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">span</span><span style="color:#f0f0f0">&gt;</span><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">i</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">button</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"popup-body"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">h5</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"title"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">h5</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;컨텐츠&nbsp;영역&nbsp;입니다.&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"popup-foot"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">button</span>&nbsp;<span style="color:#a8ff58">type</span>=<span style="color:#ffd500">"button"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"btn&nbsp;bg-info&nbsp;btn-round&nbsp;size-mid"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">data-popup-close</span>=<span style="color:#ffd500">"데이터명"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span>취소<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">button</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">button</span>&nbsp;<span style="color:#a8ff58">type</span>=<span style="color:#ffd500">"button"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"btn&nbsp;bg-primary&nbsp;btn-round&nbsp;size-mid"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">data-popup-close</span>=<span style="color:#ffd500">"데이터명"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span>확인<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">button</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div></pre><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        
+    </div>
+    <!-- popup 1 default dim layer type : START -->
+    <div class="popup-wrap is-dimmed is-full" data-popup="popup1">
+        <div class="row jc-c ai-c">
+            <div class="popup">
+                <div class="popup-inner">
+                    <div class="popup-head">
+                        <h4 class="title" title="팝업 제목 입니다. 팝업 제목 입니다. 팝업 제목 입니다. 팝업 제목 입니다. 팝업 제목 입니다. 팝업 제목 입니다. 팝업 제목 입니다. 팝업 제목 입니다.팝업 제목 입니다.">팝업 제목 입니다. 팝업 제목 입니다. 팝업 제목 입니다. 팝업 제목 입니다. 팝업 제목 입니다. 팝업 제목 입니다. 팝업 제목 입니다. 팝업 제목 입니다.팝업 제목 입니다.</h4>
+                        <button type="button" class="head-close-btn-design" data-popup-close="popup1"><i class="icon icon-cross-circle-white"><span class="blind">Popup close</span></i></button>
+                    </div>
+                    <div class="popup-body">
+                        <h5 class="title"></h5>
+                        컨텐츠 영역 입니다. 컨텐츠 영역 입니다. 컨텐츠 영역 입니다. 컨텐츠 영역 입니다. 컨텐츠 영역 입니다. 컨텐츠 영역 입니다. 컨텐츠 영역 입니다. 컨텐츠 영역 입니다.
+                        컨텐츠 영역 입니다. 컨텐츠 영역 입니다. 컨텐츠 영역 입니다. 컨텐츠 영역 입니다. 컨텐츠 영역 입니다. 컨텐츠 영역 입니다. 컨텐츠 영역 입니다. 컨텐츠 영역 입니다.
+                        컨텐츠 영역 입니다. 컨텐츠 영역 입니다. 컨텐츠 영역 입니다. 컨텐츠 영역 입니다. 컨텐츠 영역 입니다. 컨텐츠 영역 입니다. 컨텐츠 영역 입니다. 컨텐츠 영역 입니다.
+                        컨텐츠 영역 입니다. 컨텐츠 영역 입니다. 컨텐츠 영역 입니다. 컨텐츠 영역 입니다. 컨텐츠 영역 입니다. 컨텐츠 영역 입니다. 컨텐츠 영역 입니다. 컨텐츠 영역 입니다.
+                        컨텐츠 영역 입니다. 컨텐츠 영역 입니다. 컨텐츠 영역 입니다. 컨텐츠 영역 입니다. 컨텐츠 영역 입니다. 컨텐츠 영역 입니다. 컨텐츠 영역 입니다. 컨텐츠 영역 입니다.
+                        컨텐츠 영역 입니다. 컨텐츠 영역 입니다. 컨텐츠 영역 입니다. 컨텐츠 영역 입니다. 컨텐츠 영역 입니다. 컨텐츠 영역 입니다. 컨텐츠 영역 입니다. 컨텐츠 영역 입니다.
+                    </div>
+                    <div class="popup-foot">
+                        <button type="button" class="btn bg-info btn-round size-mid" data-popup-close="popup1">취소</button>
+                        <button type="button" class="btn bg-primary btn-round size-mid" data-popup-close="popup1">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //popup 1 default dim layer type : END -->
+    
+    <!-- popup 2 confirm Type : START -->
+    <div class="popup-wrap is-dimmed is-confirm" data-popup="popup2">
+        <div class="row jc-c ai-c">
+            <div class="popup">
+                <div class="popup-inner">
+                    <div class="popup-head">
+                        <h4 class="title" title="">이것을 이렇게 진행 하시겠습니까?</h4>
+                    </div>
+                    <div class="popup-body">
+                        <p class="desc">신중하게 결정해 주세요.</p>
+                    </div>
+                    <div class="popup-foot">
+                        <button type="button" class="btn bg-info btn-round size-mid" data-popup-close="popup2">취소</button>
+                        <button type="button" class="btn bg-primary btn-round size-mid" data-popup-close="popup2">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //popup 2 confirm Type : END-->
+    
+    <!-- popup 3 alert Type : START -->
+    <div class="popup-wrap is-dimmed is-alert" data-popup="popup3">
+        <div class="row jc-c ai-c">
+            <div class="popup">
+                <div class="popup-inner">
+                    <div class="popup-body">
+                        <h5 class="title tac">이곳은 제목을 작성 하는 영역입니다. 이곳은 제목을 작성 하는 영역입니다. 이곳은 제목을 작성 하는 영역입니다.</h5>
+                    </div>
+                    <div class="popup-foot">
+                        <button type="button" class="btn bg-primary btn-round size-mid m-wide" data-popup-close="popup3">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //popup 3 alert Type : END -->
+    
+    <!-- popup 4 default layer Type : START -->
+    <div class="popup-wrap" data-popup="popup4">
+        <div class="row jc-c ai-c">
+            <div class="popup">
+                <div class="popup-inner">
+                    <div class="popup-body">
+                        <h5 class="title tac">이곳은 제목을 작성 하는 영역입니다. 이곳은 제목을 작성 하는 영역입니다. 이곳은 제목을 작성 하는 영역입니다.</h5>
+                    </div>
+                    <div class="popup-foot">
+                        <button type="button" class="btn bg-primary btn-round size-mid m-wide" data-popup-close="popup4">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //popup 4 default layer  Type : END -->
+<script type="text/javascript">
+    include.header("Popup");
+    include.footer();
+</script>
+<script type="text/javascript" src="../assets/js/popup.js"></script>
+<script type="text/javascript" src="../assets/js/gnb.js"></script>
+<script type="text/javascript">
+    gnb.pageActivate(1);
+</script>
+</body>
+</html>

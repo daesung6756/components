@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+.radio,
+.checkbox {position:relative;display:inline-block;vertical-align: top;}
+.radio > label,
+.checkbox > label {display:inline-block;vertical-align:top;position:relative;font-size:16px;height:20px;line-height:20px;padding-left:23px;cursor:pointer;}
+.radio > label:before,
+.checkbox > label:before {content:"";position:absolute;top:1px;left:0;width:18px;height:18px;background-position: 0 0;background-repeat: no-repeat;background-size:38px}
+.radio > input[type="radio"],
+.checkbox > input[type="checkbox"]{position:absolute;top:0;left:0;width:1px;height:1px;z-index:-1;}
+.radio > input[type="radio"]:checked + label::before,
+.checkbox > input[type="checkbox"]:checked + label:before {background-position:-20px 0}
+.radio > input[type="radio"]:required + label,
+.checkbox > input[type="checkbox"]:required + label {color:#f70000}
+.radio > input[type="radio"]:required + label::before,
+.checkbox > input[type="checkbox"]:required + label::before {background-position:0 -20px}
+.radio > label::before {background-image:url("/assets/images/icons/sprite/icon-sp-radio-black.png")}
+.checkbox > label::before {background-image:url("/assets/images/icons/sprite/icon-sp-checkbox-black.png");}
+
+.text-area:required,
+.text-input:required {border-color:#f70000}
+.text-input {border:1px solid #ddd;height:36px;text-indent: 10px;width:100%;}
+.text-area {border:1px solid #ddd;padding:10px;width:100%;}
+
+
+@media screen and (max-width:480px){
+    .radio > label,
+    .checkbox > label {font-size:14px;height:18px;line-height:18px;}
+    .radio > label:before,
+    .checkbox > label:before {content:"";position:absolute;top:1px;left:0;width:16px;height:16px;background-position: 0 0;background-repeat: no-repeat;background-size:33px}
+    .radio > input[type="radio"]:checked + label::before,
+    .checkbox > input[type="checkbox"]:checked + label:before {background-position:-17px 0}
+    .radio > input[type="radio"]:required + label::before,
+    .checkbox > input[type="checkbox"]:required + label::before {background-position:0 -17px}
+}
+@media screen and (max-width:320px){
+
+}
