@@ -20,7 +20,9 @@
 .notification-group .notification-group-list > li {display:none;}
 .notification-group .notification-group-list > li.is-active {display:block;}
 .notification-group.is-top {top:20px;left:50%;transform: translateX(-50%)}
-.notification-group.is-left {top:50%;right:20px;transform: translateY(-50%)}
+.notification-group.is-right {top:50%;right:20px;transform: translateY(-50%)}
+.notification-group.is-bottom {bottom:20px;left:50%;transform: translateX(-50%)}
+.notification-group.is-left {top:50%;left:20px;transform: translateY(-50%)}
 .notification-group.is-show {opacity: 1;visibility: visible;z-index:100;}
 .notification-group .notification-wrap {position:relative;}
 
