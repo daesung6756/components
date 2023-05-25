@@ -4,14 +4,17 @@
     <meta charSet="UTF-8">
     <script type="text/javascript" src="../assets/js/include.js"></script>
     <script type="text/javascript">
-        include.head("Layout Rule"); // title, add css
+        include.head("Home"); // title, add css
     </script>
 </head>
 <body>
     <div id="wrap" class="wrap">
         <main class="container">
             <div class="content">
-                <section class="section">
+                <div data-hidden="workListHidden">
+                    <a href="worklist.html" target="_self">워크리스트</a>
+                </div>
+                <section class="section mt20">
                     <table class="table-set">
                         <caption></caption>
                         <colgroup>
@@ -46,7 +49,7 @@
     </div>
     
     <script type="text/javascript">
-        include.header("Layout");
+        include.header("Home");
         include.footer();
     </script>
     <script type="text/javascript" src="../assets/js/gnb.js"></script>

@@ -1,6 +1,5 @@
 "use strict";
 
-
 const include = {
     init : function () {
 
@@ -70,6 +69,11 @@ const include = {
                 '</div>' +
             '</div>';
         wrap.appendChild(footer);
+    },
+    screenHeight : function(){
+        const header = Math.floor(document.getElementById("header").clientHeight);
+        const footer = Math.floor(document.getElementById("footer").clientHeight);
+        const screenHeight = Math.floor(window.innerHeight);
     }
-
 }
+

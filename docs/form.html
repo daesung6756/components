@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charSet="UTF-8">
+    <script type="text/javascript" src="../assets/js/include.js"></script>
+    <script type="text/javascript">
+        include.head("Form"); // title, add css
+    </script>
+</head>
+<body>
+<div id="wrap" class="wrap" data-layout="headerFixed">
+    <main id="main" class="container">
+        <div class="content">
+            <section class="section">
+                <form>
+                   
+                    <p>텍스트 </p>
+                    <ul class="list-align2 mt20">
+                        <li>
+                            <p class="">선택해 주세요.</p>
+                            <ul class="row gap10 ai-c input-set">
+                                <li>
+                                    <span class="radio">
+                                        <input type="radio" id="radioGroupField1" name="radioGroupFiled" required>
+                                        <label for="radioGroupField1">남성</label>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="radio">
+                                        <input type="radio" id="radioGroupField2" name="radioGroupFiled" required>
+                                        <label for="radioGroupField2">여성</label>
+                                    </span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>체크해 주세요.</p>
+                            <ul class="row gap10 input-set">
+                                <li>
+                                    <span class="checkbox">
+                                        <input type="checkbox" id="checkGroupField1" name="checkGroupField1" required>
+                                        <label for="checkGroupField1">텍스트 컨테츠 삽입</label>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="checkbox">
+                                        <input type="checkbox" id="checkGroupField2" name="checkGroupField2" required="">
+                                        <label for="checkGroupField2">텍스트 컨테츠 삽입</label>
+                                    </span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="input-set">
+                                <input type="email" id="emailAddress" name="emailAddress" class="input-design" placeholder="내용을 입력하세요." data-validation="setFormDatas" tabindex>
+                                <span class="notice-msg">이메일을 입력해주세요.</span>
+                                <div class="label"><label for="emailAddress">Email</label><span class="required"></span></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="input-set">
+                                <input type="text" id="companyName" name="companyName" class="input-design" placeholder="내용을 입력하세요." data-validation="setFormDatas" tabindex>
+                                <span class="notice-msg">내용을 입력해주세요.</span>
+                                <div class="label"><label for="companyName">Company</label><span class="required"></span></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="input-set">
+                                <textarea id="note" name="note" class="input-design textarea-design" placeholder="Please enter your details." tabindex></textarea>
+                                <div class="label"><label for="note">Note</label></div>
+                            </div>
+                        </li>
+                        <li>
+                        
+                        </li>
+                    </ul>
+                </form>
+            </section>
+        </div>
+    </main>
+</div>
+
+<script type="text/javascript">
+    include.header("Form");
+    include.footer();
+</script>
+<script type="text/javascript" src="../assets/js/common-pub.js"></script>
+<script type="text/javascript" src="../assets/js/gnb.js"></script>
+<script type="text/javascript">
+    gnb.pageActivate(4);
+    include.screenHeight();
+</script>
+</body>
+</html>

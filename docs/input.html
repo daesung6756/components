@@ -4,13 +4,13 @@
     <meta charSet="UTF-8">
     <script type="text/javascript" src="../assets/js/include.js"></script>
     <script type="text/javascript">
-        include.head("Input Component","input.css") // title, add css
+        include.head("Input Component") // title, add css
     </script>
 </head>
 <body>
-    <div id="wrap" class="wrap">
+    <div id="wrap" class="wrap" data-layout="headerFixed">
         
-        <main id="main" class="main container">
+        <main id="main" class=" container">
             <div class="content">
                 <!-- Guide : START -->
                 <section class="section">
@@ -231,9 +231,11 @@
     include.header("Input");
     include.footer();
 </script>
+<script type="text/javascript" src="../assets/js/common-pub.js"></script>
 <script type="text/javascript" src="../assets/js/gnb.js"></script>
 <script type="text/javascript">
     gnb.pageActivate(2);
+    include.screenHeight();
 </script>
 </body>
 </html>

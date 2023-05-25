@@ -16,6 +16,10 @@ const gnb = {
         {
             name : "Notification",
             src : "../docs/notification.html"
+        },
+        {
+            name : "Form",
+            src : "../docs/form.html"
         }
     ],
     openButtonIcon : '<i class="icon icon-burger-white"><span class="blind">gnb open</span></i>',
