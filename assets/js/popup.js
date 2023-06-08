@@ -1,6 +1,7 @@
 const popup = {
     popupItems : document.querySelectorAll("[data-popup]"),
     popupArray : [],
+    body: document.body,
     init : function (){
         if(this.popupItems.length > 0 ){
             this.dataCollection();
@@ -37,11 +38,13 @@ const popup = {
         const value = elem.dataset.popupOpen;
         const popup = document.querySelector("[data-popup='" + value + "']");
         popup.classList.add("is-show")
+        this.body.classList.add("is-fixed")
     },
     close : function ( elem ) {
         const value = elem.dataset.popupClose;
         const popup = document.querySelector("[data-popup='" + value + "']");
         popup.classList.remove("is-show")
+        this.body.classList.remove("is-fixed")
     }
 }
 document.addEventListener("DOMContentLoaded", function(){

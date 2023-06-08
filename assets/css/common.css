@@ -43,6 +43,7 @@ img {display:block;width:100%;max-width:100%;}
     font-weight: 900;
     font-style: normal;
 }
+body.is-fixed {overflow:hidden;}
 .wrap {position:relative;}
 .header {background: #333; transition: background .3s ease-in-out}
 .container {background:#efefef;}
@@ -106,8 +107,20 @@ img {display:block;width:100%;max-width:100%;}
 .table-wrap {overflow:hidden;overflow-x:auto;}
 .table-set {table-layout: fixed;width:100%;line-height:1.4;min-width:680px}
 .table-set tr:hover {background: #d3f0fa;}
-.table-set th{font-size:.8rem;padding:.5rem .1rem;border-bottom:1px solid #ddd;background:#ddd;}
+.table-set th {position:relative;font-size:14px;font-weight:700;padding:10px 15px 10px 5px;border-bottom:1px solid #ddd;background:#ddd;}
+.table-set th .sorting-up,
+.table-set th .sorting-down {position:absolute;top:50%;right:0px;padding:5px;transform: translateY(-50%)}
+.table-set th .sorting-up {margin-top:-7px;}
+.table-set th .sorting-down {margin-top:7px;}
+.table-set th .sorting-up > span ,
+.table-set th .sorting-down > span {position:relative;width:16px;height:16px;}
+.table-set th .sorting-up > span::before,
+.table-set th .sorting-down > span::before {content:"";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:0;height:0;border-left: 3px solid transparent;border-right: 3px solid transparent;}
+.table-set th .sorting-up > span::before {border-bottom: 6px solid #333;}
+.table-set th .sorting-down > span::before {border-top: 6px solid #333;}
+
 .table-set td{text-align:center;font-size:.8rem;padding:10px 5px;border-bottom:1px solid #ddd;vertical-align: middle;}
+.table-set tfoot td {background:#efefef;}
 
 /* tab */
 .tab-control-wrap{overflow:hidden;overflow-x:auto; scroll-behavior: smooth;-webkit-transition-duration: 1s;-o-transition-duration: 1s;transition-duration: 1s;-webkit-transition-timing-function: ease-in-out;-o-transition-timing-function: ease-in-out;transition-timing-function: ease-in-out;}
@@ -170,6 +183,7 @@ img {display:block;width:100%;max-width:100%;}
 .round-desc-box-gray {background:#efefef}
 .round-title-box-orange {background:#e25b00}
 .round-title-box-blue {background:#19a2ff}
+.rect-white-box {padding:20px;background:#fff;box-shadow:0 0 10px rgba(0,0,0,.2)}
 
 /* shadow */
 .box-sd10 {-webkit-box-shadow:10px 10px 10px rgba(0,0,0,.2);box-shadow:10px 10px 10px rgba(0,0,0,.3)}

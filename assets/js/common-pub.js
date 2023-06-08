@@ -103,16 +103,24 @@ const UI = {
                     const btns = document.querySelectorAll("[data-tab-btn='" + value + "']");
                     const contents = document.querySelectorAll("[data-tab-content='" + value + "']")
 
+                    let isActivateClass = false;
                     let activateBtn = null;
                     let activateKey = null;
 
                     btns.forEach(function(btn, key){
-                        if(key === 0){
-                            btn.parentElement.classList.add("is-active");
-                            contents[0].classList.add("is-show");
-                            activateBtn = btn.parentElement;
-                            activateKey = key;
+
+                        if(!isActivateClass){
+                            if(btn.parentElement.classList.contains("is-active")){
+                                activateBtn = btn.parentElement;
+                                activateKey = key;
+                                isActivateClass = true;
+
+                                if(!contents[key].classList.contains("is-show")){
+                                    contents[key].classList.add("is-show");
+                                }
+                            }
                         }
+
                         btn.addEventListener("click", function(){
                             if(btn.parentElement.classList.contains("is-active")){
                                 return;
@@ -128,6 +136,13 @@ const UI = {
                             }
                         })
                     })
+
+                    if(!isActivateClass){
+                        btns[0].parentElement.classList.add("is-active");
+                        contents[0].classList.add("is-show");
+                        activateBtn = btns[0].parentElement;
+                        activateKey = 0;
+                    }
 
                 })
             },
@@ -155,20 +170,24 @@ const UI = {
         },
         writeHtml : function(){
             const _this = this;
+
             this.itemsGroup.forEach(function( dataName ){
                 const table = document.querySelector("[data-tableCanvas='" + dataName + "']");
+                const sumIndex = table.dataset.sumindex;
                 const data = eval(dataName);
                 const objectHead = data.thead;
                 const objectBody = data.tbody;
                 const objectFoot = data.tfoot;
-                let mhSum = 0;
+                let sumNumber = 0;
 
                 if(objectHead !== undefined){
                     const colgroup = document.createElement("colgroup");
                     const thead = document.createElement("thead");
-                    const tr =document.createElement("tr");
+                    const tr = document.createElement("tr");
 
                     objectHead.forEach(function(value, key){
+                        const sortingUpBtn = document.createElement("button");
+                        const sortingDownBtn = document.createElement("button");
                         const col = document.createElement("col");
                         const th = document.createElement("th");
                         col.style.width = value.width;
@@ -178,7 +197,29 @@ const UI = {
                         if(value.thClass.length > 0){
                             th.classList.add(value.thClass);
                         }
+                        if(value.sumNumber){
+                            objectBody.forEach(function(row) {
+                                sumNumber += Number(row[value.key]);
+                            })
+                        }
+                        if(value.sorting){
+                            sortingUpBtn.classList.add("sorting-up");
+                            sortingDownBtn.classList.add("sorting-down");
+                            sortingUpBtn.innerHTML = "<span></span>";
+                            sortingDownBtn.innerHTML = "<span></span>";
+
+                            th.appendChild(sortingUpBtn);
+                            th.appendChild(sortingDownBtn);
+
+                            sortingUpBtn.addEventListener("click", function(e){
+                                _this.sortingEvent(table, key, "up");
+                            })
+                            sortingDownBtn. addEventListener("click", function(e){
+                                _this.sortingEvent(table, key, "down");
+                            })
+                        }
                         tr.appendChild(th);
+
                     })
 
                     thead.appendChild(tr);
@@ -190,10 +231,10 @@ const UI = {
                     const tbody = document.createElement("tbody");
                     objectBody.forEach(function(row){
                         const tr = document.createElement("tr");
-                        objectHead.forEach(function(col){
+                        objectHead.forEach(function(col,index){
                             const td = document.createElement("td");
                             td.innerHTML = row[col.key];
-                            if(col.tdClass ){
+                            if(col.tdClass){
                                 td.classList.add(col.tdClass)
                             }
                             tr.appendChild(td);
@@ -212,7 +253,8 @@ const UI = {
                         const sum = document.createElement("td");
                         name.innerHTML = value.name;
                         name.setAttribute("colspan", objectHead.length - 1)
-                        sum.innerHTML = mhSum;
+
+                        sum.innerHTML = sumNumber;
                         tr.appendChild(name);
                         tr.appendChild(sum);
                     })
@@ -221,7 +263,30 @@ const UI = {
                 }
 
             })
-        }
+        },
+        sortingEvent : function (table, column, order) {
+            const tbody = table.querySelector("tbody");
+            const rows = Array.from(tbody.querySelectorAll("tr"));
+
+            rows.sort((rowA, rowB) => {
+                const cellA = rowA.querySelectorAll("td")[column].innerText;
+                const cellB = rowB.querySelectorAll("td")[column].innerText;
+
+                if (order === "up") {
+                    return cellA.localeCompare(cellB);
+                } else if (order === "down") {
+                    return cellB.localeCompare(cellA);
+                }
+
+                return 0;
+            });
+
+            tbody.innerHTML = "";
+            rows.forEach(function(row) {
+                tbody.appendChild(row);
+            });
+
+        },
     }
 }
 

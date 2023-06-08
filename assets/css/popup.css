@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-.popup-wrap {display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;}
+.popup-wrap {display:none;position:fixed;top:0;left:0;right:0;height:100vh;}
 .popup-wrap.is-show {display:block;}
 .popup-wrap.is-dimmed {background-color:rgba(0,0,0,.6)}
 .popup-wrap > .row {height:100%;}
@@ -19,9 +19,12 @@
 .popup-wrap .popup-foot {padding:20px;text-align:center;font-size:0;}
 .popup-wrap .popup-foot > button + button {margin-left:10px;}
 
+.popup-wrap.is-alert .popup-head {background:#fff;color:#333;}
+
 .popup-wrap.is-confirm .popup-head{padding:20px;}
 
 @media screen and (max-width:768px) {
+    .popup-wrap > .row {display:flex;}
     .popup-wrap .popup {width:calc(100% - 40px)}
 }
 @media screen and (max-width:480px){
